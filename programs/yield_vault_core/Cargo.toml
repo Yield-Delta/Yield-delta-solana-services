@@ -1,0 +1,16 @@
+[package]
+name = "yield-vault-core"
+version = "0.1.0"
+description = "Yield Delta — shared core library (math, fees, errors, seeds) used by all vault programs"
+edition = "2021"
+
+# Pure library — no cdylib, no Anchor program entrypoint.
+[lib]
+crate-type = ["lib"]
+name = "yield_vault_core"
+
+[dependencies]
+anchor-lang = "0.30.1"
+
+[dev-dependencies]
+proptest = "1"

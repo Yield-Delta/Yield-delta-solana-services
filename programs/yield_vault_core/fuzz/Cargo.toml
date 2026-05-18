@@ -1,0 +1,28 @@
+[package]
+name = "yield-vault-core-fuzz"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = { version = "0.4", features = ["arbitrary-derive"] }
+arbitrary    = { version = "1", features = ["derive"] }
+yield-vault-core = { path = ".." }
+
+[[bin]]
+name = "fuzz_math"
+path = "fuzz_targets/fuzz_math.rs"
+test = false
+doc  = false
+
+[[bin]]
+name = "fuzz_stateful"
+path = "fuzz_targets/fuzz_stateful.rs"
+test = false
+doc  = false
+
+# Keep the fuzz crate out of the parent workspace
+[workspace]

@@ -1,0 +1,6 @@
+[package]
+name = "wasip2"
+version = "1.0.3"
+edition = "2021"
+description = "Stub — WASI p2 not used in Solana BPF targets"
+license = "MIT OR Apache-2.0"
