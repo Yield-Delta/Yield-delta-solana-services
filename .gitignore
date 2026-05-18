@@ -1,0 +1,42 @@
+# Rust / Cargo
+target/
+**/*.rs.bk
+Cargo.lock.bk
+
+# Anchor
+.anchor/
+dist/
+*.so
+
+# Solana
+test-ledger/
+.keys/
+*.json.bak
+
+# Wallet / keypairs (never commit these)
+*-deployer.json
+*-keypair.json
+wallet.json
+devnet-deployer.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
