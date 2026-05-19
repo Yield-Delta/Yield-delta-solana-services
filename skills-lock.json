@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "solana-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/building-secure-contracts/skills/solana-vulnerability-scanner/SKILL.md",
+      "computedHash": "849a371ec419c990b4aaa0b0899558c1fc97147e73351b0de707996c8fd8a1f0"
+    }
+  }
+}

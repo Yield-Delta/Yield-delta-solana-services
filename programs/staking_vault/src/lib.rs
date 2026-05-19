@@ -23,7 +23,7 @@ pub(crate) use instructions::stake::__client_accounts_stake;
 pub(crate) use instructions::unstake::__client_accounts_unstake;
 
 // Replace with: solana address -k target/deploy/staking_vault-keypair.json
-declare_id!("Bhmqob5GG4gBjEpJSYN17bGhWXnDS7rsrDH4UF7SduQ4");
+declare_id!("CKeT6u3dhZqWu9mvVPQ72TvzjLW7TmzUABU92c6ZeHJd");
 
 #[program]
 pub mod staking_vault {

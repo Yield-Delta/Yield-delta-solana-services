@@ -30,7 +30,7 @@ pub(crate) use instructions::deposit::__client_accounts_deposit;
 pub(crate) use instructions::initialize::__client_accounts_initialize;
 pub(crate) use instructions::withdraw::__client_accounts_withdraw;
 
-declare_id!("StyNEoSmEPwNUgJDE4bjbp6FbPoHEwHYnRySdQLCM64");
+declare_id!("DUBHVDkWAF3NUkajnUbFWLrzFHVXkikR1u2ygPd2Ws43");
 
 #[program]
 pub mod adaptive_yield_vault {

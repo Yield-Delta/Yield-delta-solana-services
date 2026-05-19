@@ -28,6 +28,7 @@ pub struct Deposit<'info> {
     pub vault_state: Account<'info, LpVaultState>,
 
     /// User's LP token account — source of LP tokens to deposit.
+    /// Boxed to keep the try_accounts stack frame under the 4096-byte BPF limit.
     #[account(
         mut,
         constraint = user_lp_account.mint == vault_state.lp_token_mint
@@ -35,7 +36,7 @@ pub struct Deposit<'info> {
         constraint = user_lp_account.owner == user.key()
             @ LpVaultError::Unauthorized,
     )]
-    pub user_lp_account: Account<'info, TokenAccount>,
+    pub user_lp_account: Box<Account<'info, TokenAccount>>,
 
     /// Vault's LP token ATA — receives the deposited tokens.
     #[account(
@@ -43,7 +44,7 @@ pub struct Deposit<'info> {
         constraint = vault_lp_account.key() == vault_state.vault_lp_account
             @ LpVaultError::Overflow,
     )]
-    pub vault_lp_account: Account<'info, TokenAccount>,
+    pub vault_lp_account: Box<Account<'info, TokenAccount>>,
 
     /// Vault share-token mint.
     #[account(
@@ -51,7 +52,7 @@ pub struct Deposit<'info> {
         constraint = vault_mint.key() == vault_state.vault_mint
             @ LpVaultError::Overflow,
     )]
-    pub vault_mint: Account<'info, Mint>,
+    pub vault_mint: Box<Account<'info, Mint>>,
 
     /// User's vault share token ATA — created if it doesn't exist.
     #[account(
@@ -60,7 +61,7 @@ pub struct Deposit<'info> {
         associated_token::mint = vault_mint,
         associated_token::authority = user,
     )]
-    pub user_share_account: Account<'info, TokenAccount>,
+    pub user_share_account: Box<Account<'info, TokenAccount>>,
 
     /// Per-user position PDA — created on first deposit.
     #[account(

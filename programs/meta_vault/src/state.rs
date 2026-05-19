@@ -4,7 +4,7 @@ pub const MAX_ALLOCATIONS: usize = 6;
 
 /// One sub-strategy slot in the meta vault's allocation table.
 /// strategy_id == 0 means the slot is empty.
-#[derive(AnchorSerialize, AnchorDeserialize, Clone, Default)]
+#[derive(AnchorSerialize, AnchorDeserialize, Clone, Default, Debug)]
 pub struct AllocationSlot {
     pub strategy_id: u8,
     pub weight_bps: u16,

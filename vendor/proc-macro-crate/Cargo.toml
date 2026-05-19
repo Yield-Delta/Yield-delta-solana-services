@@ -1,0 +1,6 @@
+[package]
+name = "proc-macro-crate"
+version = "3.5.0"
+edition = "2021"
+description = "Stub — proc-macro-crate without toml_edit/toml_parser for Solana BPF builds"
+license = "MIT OR Apache-2.0"

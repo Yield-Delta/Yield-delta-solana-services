@@ -27,7 +27,7 @@ pub(crate) use instructions::rebalance_hedge::__client_accounts_rebalance_hedge;
 pub(crate) use instructions::withdraw::__client_accounts_withdraw;
 
 // Replace with: solana address -k target/deploy/delta_neutral_vault-keypair.json
-declare_id!("C48TJDYWpws9dKu8bo8nq679w9vfCd7D1Emi9Abbhfyf");
+declare_id!("J27AutkCvCGrNmpu2DxReEhJFUkStUF6HULuQ3hxm8BC");
 
 #[program]
 pub mod delta_neutral_vault {

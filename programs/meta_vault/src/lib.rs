@@ -27,7 +27,7 @@ pub(crate) use instructions::set_allocations::__client_accounts_set_allocations;
 pub(crate) use instructions::withdraw::__client_accounts_withdraw;
 
 // Replace with: solana address -k target/deploy/meta_vault-keypair.json
-declare_id!("F4x55MUt2WXxqmtVQNyXBxg822pGUdge8KoYvuH6fLDQ");
+declare_id!("GWnVeWATrewpyPjWHkic5QjwH7knczUwovckx34jzHS1");
 
 #[program]
 pub mod meta_vault {

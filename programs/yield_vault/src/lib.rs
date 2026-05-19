@@ -13,7 +13,7 @@ pub(crate) use instructions::withdraw::__client_accounts_withdraw;
 
 // Replace with the address printed by `solana address -k target/deploy/yield_vault-keypair.json`
 // after the first `anchor build`, then rebuild before deploying.
-declare_id!("5hp22e1bv9HG8QXZKE1YC48pgWZc1zNWdh3v1Z65h4zD");
+declare_id!("FGH5S7dZrpM44QUquQaWo4G184rRgvhzV9np5MaAX8ga");
 
 #[program]
 pub mod yield_vault {

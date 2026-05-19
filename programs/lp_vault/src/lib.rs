@@ -26,7 +26,7 @@ pub(crate) use instructions::simulate_compound::__client_accounts_simulate_compo
 pub(crate) use instructions::withdraw::__client_accounts_withdraw;
 
 // Replace with: solana address -k target/deploy/lp_vault-keypair.json
-declare_id!("7UWS2aFyvNXiCHj1BTuWC7QU9iMBZcvjGBNABi7ByN4A");
+declare_id!("E1Vwm8sabF4V4BgVKgFAoaVNSrwaFctYjj3hFuqDohww");
 
 #[program]
 pub mod lp_vault {

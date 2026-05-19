@@ -102,12 +102,15 @@ pub fn handler(ctx: Context<Withdraw>, shares: u64) -> Result<()> {
         vault.last_fee_accrual = now;
     }
 
-    // Step 2: calculate USDC out using calculate_assets_for_shares.
+    // Step 2: calculate USDC out using net_assets (total_assets - accumulated_fees).
+    // Must use the same asset basis as deposit to prevent fee siphoning: a depositor
+    // who priced in against net_assets must also redeem against net_assets.
     let vault = &ctx.accounts.vault_state;
+    let net_assets = vault.total_assets.saturating_sub(vault.accumulated_fees);
     let usdc_out = calculate_assets_for_shares(
         shares,
         vault.total_shares,
-        vault.total_assets,
+        net_assets,
     )
     .map_err(|_| MetaVaultError::Overflow)?;
 
@@ -154,11 +157,12 @@ pub fn handler(ctx: Context<Withdraw>, shares: u64) -> Result<()> {
         .ok_or(MetaVaultError::Overflow)?;
 
     msg!(
-        "MetaVault Withdraw: user={} shares={} usdc_out={} \
+        "MetaVault Withdraw: user={} shares={} usdc_out={} net_assets={} \
          total_assets={} total_shares={} accumulated_fees={}",
         ctx.accounts.user.key(),
         shares,
         usdc_out,
+        net_assets,
         vault.total_assets,
         vault.total_shares,
         vault.accumulated_fees,

@@ -23,7 +23,7 @@ pub(crate) use instructions::mark_rebalanced::__client_accounts_mark_rebalanced;
 pub(crate) use instructions::post_signal::__client_accounts_post_signal;
 
 // Replace with: solana address -k target/deploy/yield_oracle-keypair.json
-declare_id!("CRZ13p9bH4hVcStuGFUZ1sjPf94J1q9H2fsGs5nCeoqG");
+declare_id!("BCfceGYVBifA6uQ2D6wiLieTHC786u37dYzCLYoNk1df");
 
 #[program]
 pub mod yield_oracle {

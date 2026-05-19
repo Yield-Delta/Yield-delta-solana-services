@@ -1,19 +1,19 @@
 [toolchain]
 anchor_version = "0.30.1"
-solana_version = "1.18.26"
+solana_version = "3.1.15"
 
 [features]
 resolution = true
 skip-lint = false
 
 [programs.devnet]
-adaptive_yield_vault = "StyNEoSmEPwNUgJDE4bjbp6FbPoHEwHYnRySdQLCM64"
-delta_neutral_vault = "C48TJDYWpws9dKu8bo8nq679w9vfCd7D1Emi9Abbhfyf"
-lp_vault = "7UWS2aFyvNXiCHj1BTuWC7QU9iMBZcvjGBNABi7ByN4A"
-meta_vault = "F4x55MUt2WXxqmtVQNyXBxg822pGUdge8KoYvuH6fLDQ"
-staking_vault = "Bhmqob5GG4gBjEpJSYN17bGhWXnDS7rsrDH4UF7SduQ4"
-yield_oracle = "CRZ13p9bH4hVcStuGFUZ1sjPf94J1q9H2fsGs5nCeoqG"
-yield_vault = "5hp22e1bv9HG8QXZKE1YC48pgWZc1zNWdh3v1Z65h4zD"
+adaptive_yield_vault = "DUBHVDkWAF3NUkajnUbFWLrzFHVXkikR1u2ygPd2Ws43"
+delta_neutral_vault = "J27AutkCvCGrNmpu2DxReEhJFUkStUF6HULuQ3hxm8BC"
+lp_vault = "E1Vwm8sabF4V4BgVKgFAoaVNSrwaFctYjj3hFuqDohww"
+meta_vault = "GWnVeWATrewpyPjWHkic5QjwH7knczUwovckx34jzHS1"
+staking_vault = "CKeT6u3dhZqWu9mvVPQ72TvzjLW7TmzUABU92c6ZeHJd"
+yield_oracle = "BCfceGYVBifA6uQ2D6wiLieTHC786u37dYzCLYoNk1df"
+yield_vault = "FGH5S7dZrpM44QUquQaWo4G184rRgvhzV9np5MaAX8ga"
 
 [registry]
 url = "https://api.apr.dev"

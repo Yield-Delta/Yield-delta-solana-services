@@ -5,6 +5,8 @@ rust-version = "1.75"
 
 [patch.crates-io]
 wasip2 = { path = "vendor/wasip2" }
+wasip3 = { path = "vendor/wasip3" }
+proc-macro-crate = { path = "vendor/proc-macro-crate" }
 
 [profile.release]
 overflow-checks = true
